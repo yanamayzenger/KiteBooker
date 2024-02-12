@@ -20,11 +20,12 @@ The kitesurfing community currently lacks a unified platform for coordinating le
 
 ### MVP Features
 
-- Main Page: An introduction and selection portal for different user types to access relevant features.
 - Lesson Booking Platform: A calendar-based system for students to browse available lessons, view detailed information, and book lessons according to their schedule and skill level.
 - Responsive Design: A user-friendly interface compatible across various devices
 
 ## Nice-to-Haves
+
+- Main Page: An introduction and selection portal for different user types to access relevant features.
 
 - User Account Management: Customizable registration and profiles for different user types. This relies on implementing an authentication system that allows users to sign up, log in, and manage their profiles securely. Authentication will enable a more personalized experience and is essential for features like booking management and receiving personalized notifications.
 
@@ -89,7 +90,7 @@ The kitesurfing community currently lacks a unified platform for coordinating le
 
 ### Database
 
-- System: MySQL for robust data storage and retrieval.
+- System: MySQL for robust data storage and retrieval. (I might go for MongoDB- i am still researching into that).
 
 ### APIs
 
@@ -97,6 +98,23 @@ The kitesurfing community currently lacks a unified platform for coordinating le
 - Additional APIs: As needed for future expansions and features.
 
 ### Sitemap
+
+### Booking Page
+
+MVP:
+
+- Integrated Lesson Booking System: Interactive calendar with filters for lesson searching that will focus on Students booking the lessons.
+
+Nice to have:
+
+- Lesson Details: Comprehensive information about lessons, including instructor profiles and lesson plans.
+- Instructor Profiles: Detailed profiles with qualifications, experience, and reviews.
+- Booking and Payment Process: Secure booking form and payment gateway integration.
+- Confirmation and Notifications: Booking confirmations and automated reminders.
+- Weather Updates: Real-time weather information related to lessons.
+- Help and Support: FAQs and support options, including live chat or contact forms.
+
+## Nice-to-Haves
 
 ### Home Page
 
@@ -106,18 +124,6 @@ The kitesurfing community currently lacks a unified platform for coordinating le
 - Testimonials and Success Stories: User feedback and stories to build credibility.
 - Call to Action (CTA):Prominent buttons encouraging sign-up or lesson browsing.
 - Footer: Links to resources, FAQs, contact info, social media, and legal info.
-
-### Booking Page
-
-- Integrated Lesson Booking System:Interactive calendar with filters for lesson searching.
-- Lesson Details: Comprehensive information about lessons, including instructor profiles and lesson plans.
-- Instructor Profiles: Detailed profiles with qualifications, experience, and reviews.
-- Booking and Payment Process: Secure booking form and payment gateway integration.
-- Confirmation and Notifications: Booking confirmations and automated reminders.
-- Weather Updates: Real-time weather information related to lessons.
-- Help and Support: FAQs and support options, including live chat or contact forms.
-
-## Nice-to-Haves
 
 ### User Account Management
 
