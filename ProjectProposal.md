@@ -21,11 +21,12 @@ The kitesurfing community currently lacks a unified platform for coordinating le
 ### MVP Features
 
 - Lesson Booking Platform: A calendar-based system for students to browse available lessons, view detailed information, and book lessons according to their schedule and skill level.
-- Responsive Design: A user-friendly interface compatible across various devices
 
 ## Nice-to-Haves
 
 - Main Page: An introduction and selection portal for different user types to access relevant features.
+
+- Responsive Design: A user-friendly interface compatible across various devices
 
 - User Account Management: Customizable registration and profiles for different user types. This relies on implementing an authentication system that allows users to sign up, log in, and manage their profiles securely. Authentication will enable a more personalized experience and is essential for features like booking management and receiving personalized notifications.
 
@@ -167,7 +168,7 @@ Nice to have:
 
 ### Mockups
 
-Mockups are created using tools like Figma/Canva, focusing on the unique needs of each user type, ensuring ease of use and intuitive navigation.
+Mockups are included in the assets folder.
 
 ## Data Models
 
