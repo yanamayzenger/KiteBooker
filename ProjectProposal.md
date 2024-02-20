@@ -112,8 +112,8 @@ Nice to have:
 - Instructor Profiles: Detailed profiles with qualifications, experience, and reviews.
 - Booking and Payment Process: Secure booking form and payment gateway integration.
 - Confirmation and Notifications: Booking confirmations and automated reminders.
-- Weather Updates: Real-time weather information related to lessons.
-- Help and Support: FAQs and support options, including live chat or contact forms.
+- Lesson Details: Comprehensive information about lessons, including instructor profiles and lesson plans.
+- Instructor Profiles: Detailed profiles with qualifications, experience, and reviews.
 
 ## Nice-to-Haves
 
