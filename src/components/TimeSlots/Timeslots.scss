@@ -1,0 +1,31 @@
+@use "../../styles/variables" as *; // Ensure this is at the top of your file
+
+.time-slots-container,
+.instructor-list-container {
+  margin: 1.25rem;
+  padding: 0.625rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+}
+
+.time-slot-list,
+.instructor-list {
+  list-style: none;
+  padding: 0;
+}
+
+.time-slot-list li,
+.instructor-list li {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid #eee;
+}
+
+.time-slot-list li:hover,
+.instructor-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.time-slots-heading {
+  color: $buttons-title;
+}
