@@ -1,6 +1,6 @@
+@use "./variables" as *;
 @use "./fonts" as *;
 @use "./mixins" as *;
-@use "./variables" as *;
 
 *,
 *::before,
@@ -9,6 +9,7 @@
 }
 
 * {
+  font-family: $primary-font;
   margin: 0;
 }
 body {

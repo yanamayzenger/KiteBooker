@@ -2,6 +2,7 @@
 @use "../../styles/variables" as *;
 @use "../../styles/fonts" as *;
 @use "../../styles/mixins" as *;
+
 .calendar-wrapper {
   display: flex;
   flex-direction: column;
