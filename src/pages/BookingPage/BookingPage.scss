@@ -1,0 +1,28 @@
+.booking {
+  display: flex;
+  padding: 1.25rem;
+  gap: 1.25rem;
+
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 50%;
+
+    .calendar-and-slots {
+      display: flex;
+      flex-direction: row;
+      gap: 1.25rem;
+    }
+    .left-bottom {
+      width: 100%;
+    }
+  }
+
+  .right-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    width: 50%;
+  }
+}

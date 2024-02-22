@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import Calendar from "./components/Calendar/Calendar";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import MainPage from "./pages/MainPage/MainPage";
+import BookingPage from "./pages/BookingPage/BookingPage";
 
 function App() {
-  const [date, setDate] = useState(new Date());
-
-  const handleSelectDate = (selectedDate) => {
-    setDate(selectedDate);
-  };
-
   return (
-    <div className="App">
-      <h1>KiteBooker: Book Your Kitesurfing Lesson</h1>
-      <Calendar onSelectDate={handleSelectDate} />
-    </div>
+    <Router>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/KiteBooking" element={<BookingPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

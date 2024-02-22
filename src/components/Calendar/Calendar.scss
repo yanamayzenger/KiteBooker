@@ -8,14 +8,14 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 350px;
+  max-width: 21.875rem;
   margin: auto;
   .custom-button {
     width: 100%;
   }
   .react-calendar {
     width: 100%;
-    max-width: 350px;
+    max-width: 21.875rem;
     background-color: $calendar-background;
     border: 1px solid $black;
     border-radius: $border-radius;
