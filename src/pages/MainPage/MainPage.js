@@ -12,8 +12,8 @@ const MainPage = () => (
         <button className="login-btn">Log In</button>
         <button className="signup-btn">Sign Up</button>
       </div>
+      <Footer />
     </div>
-    <Footer />
   </div>
 );
 
