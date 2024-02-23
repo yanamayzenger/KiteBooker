@@ -1,8 +1,10 @@
 import React from "react";
+import Header from "../../components/Header/Header";
 import CustomCalendar from "../../components/Calendar/Calendar";
 import LessonTimeAvailability from "../../components/TimeSlots/TimeSlots";
 import WeatherWidget from "../../components/Weather/Weather";
 import InstructorsProfile from "../../components/InstructorList/InstructorList";
+
 import "./BookingPage.scss";
 
 const BookingPage = () => (
