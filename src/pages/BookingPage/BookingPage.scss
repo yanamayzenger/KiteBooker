@@ -1,12 +1,31 @@
-.booking {
-  display: flex;
-  padding: 1.25rem;
-  gap: 1.25rem;
+@use "../../styles/global" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/fonts" as *;
+@use "../../styles/mixins" as *;
 
-  .left-column {
+.booking-page {
+  display: flex;
+  flex-direction: column; // Ensure content flows vertically
+  min-height: 100vh; // Full viewport height
+  background-image: url("../../assets/Images/BackgroundSunset2.jpg");
+  background-size: cover;
+  background-position: center;
+
+  .booking-content {
+    flex: 1; // Allows content to expand, pushing Footer to the bottom
+    display: flex;
+    padding: 1.25rem;
+    gap: 1.25rem;
+  }
+
+  .left-column,
+  .right-column {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+  }
+
+  .left-column {
     width: 50%;
 
     .calendar-and-slots {
@@ -14,8 +33,9 @@
       flex-direction: row;
       gap: 1.25rem;
     }
+
     .left-bottom {
-      width: 100%;
+      flex: 1;
     }
   }
 
