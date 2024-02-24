@@ -25,7 +25,7 @@
     .nav-btn {
       width: 10rem;
       color: $buttons-title;
-      background-color: $buttons;
+      background-color: rgba($eunry, 0.7);
       border: none;
       border-radius: $border-radius;
       padding: 0.625rem;
@@ -35,7 +35,7 @@
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: darken($buttons, 10%);
+        background-color: darken($eunry, 50%);
       }
     }
   }

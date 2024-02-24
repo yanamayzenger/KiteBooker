@@ -1,29 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Button from "../Button/Button";
 import "./Timeslots.scss";
 
-const TimeSlots = ({ date, onSelectTimeSlot }) => {
-  const [timeSlots, setTimeSlots] = useState([]);
+const TimeSlots = ({ onSelectTimeSlot }) => {
+  const timeSlots = ["9 am- 11 am", "11 am- 1 pm", "1 pm- 3 pm", "3 pm- 5 pm"];
+  const [selectedTimeSlot, setSelectedTimeSlot] = useState("");
 
-  useEffect(() => {
-    fetch(`http://localhost:5000/api/time-slots?date=${date}`)
-      .then((response) => response.json())
-      .then((data) => setTimeSlots(data))
-      .catch((error) => console.error("Error fetching time slots:", error));
-  }, [date]);
+  const handleTimeSlotSelect = (timeSlot) => {
+    console.log(`Time Slot selected: ${timeSlot}`);
+    setSelectedTimeSlot(timeSlot);
+    onSelectTimeSlot(timeSlot);
+  };
 
   return (
-    <div className="time-slots-wrapper">
-      <Button title="Select Time Slot" />
-      <div className="time-slots-container">
-        <h2 className="time-slots-heading">Available Time Slots for {date}</h2>
-        <ul className="time-slot-list">
-          {timeSlots.map((slot, index) => (
-            <li key={index} onClick={() => onSelectTimeSlot(slot)}>
-              {slot}
-            </li>
-          ))}
-        </ul>
+    <div className="time-slots-container">
+      <div className="time-slots-title">
+        <Button title="Select Time Slot" />
+      </div>
+      <div className="time-slots-buttons">
+        {timeSlots.map((timeSlot, index) => (
+          <div key={index} className={`time-slot-${index + 1}`}>
+            <button
+              onClick={() => handleTimeSlotSelect(timeSlot)}
+              className={timeSlot === selectedTimeSlot ? "selected" : ""}
+            >
+              {timeSlot}
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );
