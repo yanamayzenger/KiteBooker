@@ -1,0 +1,24 @@
+@use "../../styles/global" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/fonts" as *;
+@use "../../styles/mixins" as *;
+
+.instructors-page {
+  .section {
+    background: linear-gradient(to bottom, #072c4e, #65aaab);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+    text-align: center;
+
+    h2 {
+      font-size: 5rem;
+      line-height: $normal-header-line-height;
+      font-weight: bold;
+      margin-bottom: 4rem;
+      margin-top: 3rem;
+      color: $white;
+    }
+  }
+}
