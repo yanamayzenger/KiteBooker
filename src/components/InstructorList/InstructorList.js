@@ -2,15 +2,24 @@ import React, { useState, useEffect } from "react";
 import InstructorProfile from "../InstructorsProfile/InstructorsProfile";
 import Button from "../Button/Button";
 import "./InstructorList.scss";
+import { instructorImages } from "../InstructorImages/InstructorImages";
 
 function InstructorList() {
   const [instructors, setInstructors] = useState([]);
 
   useEffect(() => {
-    // Corrected fetch call
     fetch(`http://localhost:8080/api/instructors`)
       .then((response) => response.json())
-      .then((data) => setInstructors(data))
+      .then((data) => {
+        setInstructors(
+          data.map((instructor) => {
+            return {
+              ...instructor,
+              image: instructorImages[instructor.name],
+            };
+          })
+        );
+      })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 

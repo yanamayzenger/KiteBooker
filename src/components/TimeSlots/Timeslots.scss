@@ -30,7 +30,6 @@
 
       &:hover,
       &.selected {
-        // Apply hover styles also to selected button
         background-color: darken($porcelain, 50%);
       }
     }
