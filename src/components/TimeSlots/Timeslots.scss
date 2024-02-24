@@ -1,31 +1,38 @@
-@use "../../styles/variables" as *; // Ensure this is at the top of your file
+@use "../../styles/global" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/fonts" as *;
+@use "../../styles/mixins" as *;
 
-.time-slots-container,
-.instructor-list-container {
-  margin: 1.25rem;
-  padding: 0.625rem;
-  border: 0.0625rem solid #ccc;
-  border-radius: 0.3125rem;
-}
+.time-slots-container {
+  margin-right: 2rem;
 
-.time-slot-list,
-.instructor-list {
-  list-style: none;
-  padding: 0;
-}
+  .time-slots-title {
+    margin-top: 1.5rem;
+  }
 
-.time-slot-list li,
-.instructor-list li {
-  cursor: pointer;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid #eee;
-}
+  .time-slots-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-.time-slot-list li:hover,
-.instructor-list li:hover {
-  background-color: #f0f0f0;
-}
+    button {
+      width: 10rem;
+      color: $blue-dianne;
+      background-color: rgba($porcelain, 0.5);
+      border: none;
+      border-radius: $border-radius;
+      padding: 0.625rem;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-bottom: 2rem;
 
-.time-slots-heading {
-  color: $buttons-title;
+      &:hover,
+      &.selected {
+        // Apply hover styles also to selected button
+        background-color: darken($porcelain, 50%);
+      }
+    }
+  }
 }
