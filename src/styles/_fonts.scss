@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Titillium";
+  src: url("../assets/Fonts/TitilliumWeb-Regular.woff") format("truetype"),
+    url("../assets/Fonts/TitilliumWeb-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Titillium";
+  src: url("../assets/Fonts/TitilliumWeb-SemiBold.woff") format("truetype"),
+    url("../assets/Fonts/TitilliumWeb-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Fallback";
+  src: local("Arial"), local("Helvetica"), sans-serif;
+}

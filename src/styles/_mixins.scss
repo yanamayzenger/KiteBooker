@@ -1,0 +1,42 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+
+@mixin tablet {
+  @media (min-width: $tablet-size) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-size) {
+    @content;
+  }
+}
+
+@mixin desktop-extended {
+  @media (min-width: $desktop-size-extended) {
+    @content;
+  }
+}
+
+@mixin medium-body-text {
+  font-weight: $weight-regular;
+  font-size: $mobile-m-body-font;
+  line-height: $mobile-m-body-line-height;
+
+  @include tablet {
+    font-size: $normal-m-body-font;
+    line-height: $normal-m-body-line-height;
+  }
+}
+
+@mixin small-body-text {
+  font-weight: $weight-regular;
+  font-size: $mobile-s-body-font;
+  line-height: $mobile-s-body-line-height;
+
+  @include tablet {
+    font-size: $normal-s-body-font;
+    line-height: $normal-s-body-line-height;
+  }
+}
