@@ -1,6 +1,8 @@
 import React from "react";
+import Button from "../Button/Button";
+import "./InstructorCardFull.scss";
 
-function InstructorProfile({
+function InstructorsCardFull({
   name,
   location,
   email,
@@ -8,9 +10,15 @@ function InstructorProfile({
   price,
   bio,
   rating,
+  image,
 }) {
   return (
-    <div className="instructor-card">
+    <div className="instructor-card-full">
+      <img
+        src={image}
+        alt={`Profile of ${name}`}
+        className="instructor-image"
+      />
       <h2>{name}</h2>
       <p>Location: {location}</p>
       <p>Email: {email}</p>
@@ -18,8 +26,11 @@ function InstructorProfile({
       <p>Price: ${price}</p>
       <p>Bio: {bio}</p>
       <p>Rating: {rating}</p>
+      <div className="instructor-book-button">
+        <Button title="Book your Lesson" />
+      </div>
     </div>
   );
 }
 
-export default InstructorProfile;
+export default InstructorsCardFull;

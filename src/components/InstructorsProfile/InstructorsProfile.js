@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button/Button";
 import "./InstructorsProfile.scss";
 function InstructorProfile({ name, location, price, rating, image }) {
   return (
@@ -12,6 +13,9 @@ function InstructorProfile({ name, location, price, rating, image }) {
       <p>Location: {location}</p>
       <p>Price: ${price}</p>
       <p>Rating: {rating}</p>
+      <div className="instructor-book-button">
+        <Button title="Book your Lesson" />
+      </div>
     </div>
   );
 }
