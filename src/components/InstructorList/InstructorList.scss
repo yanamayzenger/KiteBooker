@@ -1,0 +1,24 @@
+@use "../../styles/global" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/fonts" as *;
+@use "../../styles/mixins" as *;
+.instructors-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 43.75rem;
+  max-width: 100%;
+  .instructors-list-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .instructors-list-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+}

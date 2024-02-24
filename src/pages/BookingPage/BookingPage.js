@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import CustomCalendar from "../../components/Calendar/Calendar";
-import TimeSlots from "../../components/TimeSlots/TimeSlots"; // Ensure the import path is correct
+import TimeSlots from "../../components/TimeSlots/TimeSlots";
 import WeatherWidget from "../../components/Weather/Weather";
-import InstructorsProfile from "../../components/InstructorList/InstructorList";
+import InstructorList from "../../components/InstructorList/InstructorList";
 import "./BookingPage.scss";
 
 const BookingPage = () => {
@@ -29,7 +29,6 @@ const BookingPage = () => {
         <div className="left-column">
           <div className="calendar-and-slots">
             <CustomCalendar onSelectDate={handleSelectDate} />
-            {/* Now including TimeSlots component with the onSelectTimeSlot prop */}
             <TimeSlots onSelectTimeSlot={handleSelectTimeSlot} />
           </div>
           <div className="left-bottom">
@@ -37,7 +36,7 @@ const BookingPage = () => {
           </div>
         </div>
         <div className="right-column">
-          <InstructorsProfile />
+          <InstructorList />
         </div>
       </div>
       <Footer />

@@ -1,16 +1,22 @@
 import React from "react";
-import "./InstructorsProfile.scss";
-function InstructorProfile({ name, location, price, rating, image }) {
+
+function InstructorProfile({
+  name,
+  location,
+  email,
+  phone,
+  price,
+  bio,
+  rating,
+}) {
   return (
     <div className="instructor-card">
-      <img
-        src={image}
-        alt={`Profile of ${name}`}
-        className="instructor-image"
-      />
       <h2>{name}</h2>
       <p>Location: {location}</p>
+      <p>Email: {email}</p>
+      <p>Phone: {phone}</p>
       <p>Price: ${price}</p>
+      <p>Bio: {bio}</p>
       <p>Rating: {rating}</p>
     </div>
   );
