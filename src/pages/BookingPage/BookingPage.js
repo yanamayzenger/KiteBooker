@@ -8,20 +8,14 @@ import InstructorList from "../../components/InstructorList/InstructorList";
 import "./BookingPage.scss";
 
 const BookingPage = () => {
-  const [selectedDay, setSelectedDay] = useState("");
-  const [selectedTimeSlot, setSelectedTimeSlot] = useState("");
-
-  const handleSelectDate = (dayOfWeekName) => {
-    console.log(`Day selected: ${dayOfWeekName}`);
-    setSelectedDay(dayOfWeekName);
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedTimeSlot, setSelectedTimeSlot] = useState(null);
+  const handleSelectDate = (date) => {
+    setSelectedDate(date);
   };
-
   const handleSelectTimeSlot = (timeSlot) => {
-    console.log(`Time Slot selected: ${timeSlot}`);
     setSelectedTimeSlot(timeSlot);
-    // Add here: send the selected day and time slot to the backend to fetch available instructors
   };
-
   return (
     <div className="booking-page">
       <Header />
@@ -36,7 +30,10 @@ const BookingPage = () => {
           </div>
         </div>
         <div className="right-column">
-          <InstructorList />
+          <InstructorList
+            selectedDate={selectedDate}
+            selectedTimeSlot={selectedTimeSlot}
+          />
         </div>
       </div>
       <Footer />
