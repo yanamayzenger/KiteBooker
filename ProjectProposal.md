@@ -22,8 +22,6 @@ The kitesurfing community currently lacks a unified platform for coordinating le
 
 - Lesson Booking Platform: A calendar-based system for students to browse available lessons, view detailed information, and book lessons according to their schedule and skill level.
 
-## Nice-to-Haves
-
 - Main Page: An introduction and selection portal for different user types to access relevant features.
 
 - Responsive Design: A user-friendly interface compatible across various devices
@@ -91,7 +89,7 @@ The kitesurfing community currently lacks a unified platform for coordinating le
 
 ### Database
 
-- System: MySQL for robust data storage and retrieval. (I might go for MongoDB- i am still researching into that).
+- System: MySQL for robust data storage and retrieval.
 
 ### APIs
 
