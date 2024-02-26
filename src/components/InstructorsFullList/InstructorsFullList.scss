@@ -3,15 +3,25 @@
 @use "../../styles/fonts" as *;
 @use "../../styles/mixins" as *;
 
+.instructors-list-profiles-full {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; 
+  max-width: 1111px;
+  margin: auto; 
+}
+
 .instructor-card-full {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: 0.0625rem solid #ccc;
   border-radius: 0.5rem;
-  margin: 0.625rem;
+  margin: 0.625rem; 
   padding: 1.25rem;
-  width: 18rem;
+  flex-basis: calc(
+    33.333% - 1.25rem
+  ); 
   height: auto;
   background-color: rgba($periglacial-blue, 0.5);
   color: $primary-font;
@@ -27,14 +37,10 @@
   }
 
   .instructor-info {
-    text-align: center; 
+    text-align: center;
 
-    h2 {
-      color: $primary-font-calendar;
-      margin: 0.5rem 0;
-      text-align: center;
-    }
 
+    h2,
     p {
       color: $primary-font-calendar;
       margin: 0.5rem 0;
@@ -49,5 +55,17 @@
     button {
       width: 100%;
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .instructor-card-full {
+    flex-basis: calc(50% - 1.25rem); 
+  }
+}
+
+@media (max-width: 768px) {
+  .instructor-card-full {
+    flex-basis: 100%; 
   }
 }
