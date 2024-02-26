@@ -6,9 +6,9 @@
 .instructors-list-profiles-full {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; // Adjust this based on your design preference
+  justify-content: space-around; 
   max-width: 1111px;
-  margin: auto; // Center the container
+  margin: auto; 
 }
 
 .instructor-card-full {
@@ -17,11 +17,11 @@
   justify-content: space-between;
   border: 0.0625rem solid #ccc;
   border-radius: 0.5rem;
-  margin: 0.625rem; // Adjust margin if necessary to fit 3 cards
+  margin: 0.625rem; 
   padding: 1.25rem;
   flex-basis: calc(
     33.333% - 1.25rem
-  ); // Adjust based on actual margins to fit 3 per row
+  ); 
   height: auto;
   background-color: rgba($periglacial-blue, 0.5);
   color: $primary-font;
@@ -57,15 +57,14 @@
   }
 }
 
-// Responsive adjustments (Optional)
 @media (max-width: 1200px) {
   .instructor-card-full {
-    flex-basis: calc(50% - 1.25rem); // 2 per row for smaller screens
+    flex-basis: calc(50% - 1.25rem); 
   }
 }
 
 @media (max-width: 768px) {
   .instructor-card-full {
-    flex-basis: 100%; // 1 per row for mobile screens
+    flex-basis: 100%; 
   }
 }
