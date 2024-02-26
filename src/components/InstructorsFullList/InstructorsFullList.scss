@@ -27,19 +27,17 @@
   }
 
   .instructor-info {
-    text-align: center; // Centers all text inside the .instructor-info container
+    text-align: center; 
 
     h2 {
       color: $primary-font-calendar;
       margin: 0.5rem 0;
-      // Specifically center the instructor's name
-      text-align: center; // This line ensures the name is centered
+      text-align: center;
     }
 
     p {
       color: $primary-font-calendar;
       margin: 0.5rem 0;
-      // Keep other text elements' alignment as is, or adjust as needed
     }
   }
 
@@ -50,7 +48,6 @@
 
     button {
       width: 100%;
-      // Additional button styling here
     }
   }
 }
