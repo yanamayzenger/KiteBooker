@@ -29,9 +29,9 @@ const Header = () => {
         </button>
         <button
           className="nav-btn"
-          onClick={() => handleNavigate("/FindSchool")}
+          onClick={() => handleNavigate("/Instructors")}
         >
-          Find Kite School
+          Instructors
         </button>
       </div>
     </header>

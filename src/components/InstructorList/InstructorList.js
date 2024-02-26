@@ -31,7 +31,7 @@ function InstructorList({ selectedDate, selectedTimeSlot }) {
   return (
     <div className="instructors-list-container">
       <div className="instructors-list-title">
-        <Button title="Instructors" />
+        <Button title="Choose date and time to see Instructors" />
       </div>
       <div className="instructors-list-profiles">
         {instructors.map((instructor) => (
