@@ -31,7 +31,6 @@ function InstructorList({ selectedDate, selectedTimeSlot }) {
   const handleBookInstructor = (instructorId) => {
     console.log("Attempting to book instructor with ID:", instructorId);
 
-    // Calculate dayOfWeek from selectedDate
     const dayOfWeekNames = [
       "Sunday",
       "Monday",
@@ -48,7 +47,7 @@ function InstructorList({ selectedDate, selectedTimeSlot }) {
       date: selectedDate.toISOString().split("T")[0],
       startTime: selectedTimeSlot.start,
       endTime: selectedTimeSlot.end,
-      dayOfWeek, // Include dayOfWeek in the request
+      dayOfWeek,
     };
 
     console.log("Booking data:", bookingData);
@@ -81,7 +80,7 @@ function InstructorList({ selectedDate, selectedTimeSlot }) {
   return (
     <div className="instructors-list-container">
       <div className="instructors-list-title">
-        <Button title="Instructors" />
+        <Button title="Pick day and time to see available Instructors" />
       </div>
       <div className="instructors-list-profiles">
         {instructors.map((instructor) => (

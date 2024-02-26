@@ -23,8 +23,8 @@ function InstructorFullList() {
   }, []);
 
   return (
-    <div className="instructors-list-container">
-      <div className="instructors-list-profiles">
+    <div className="instructors-list-container-full">
+      <div className="instructors-list-profiles-full">
         {instructors.map((instructor) => (
           <InstructorCardFull key={instructor.id} {...instructor} />
         ))}
