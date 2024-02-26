@@ -3,20 +3,20 @@
 @use "../../styles/fonts" as *;
 @use "../../styles/mixins" as *;
 
-.instructor-card {
+.instructor-card-full {
   border: 0.0625rem solid #ccc;
   border-radius: 0.5rem;
   margin: 0.625rem;
   padding: 1.25rem;
-  width: 12.5rem;
+  width: 18rem;
   height: auto;
-  justify-content: space-between;
   background-color: rgba($periglacial-blue, 0.5);
   color: $primary-font;
   font-weight: bold;
   font-size: $normal-l-body-font;
   line-height: $normal-l-body-line-height;
   display: inline-block;
+  text-align: left;
 
   .instructor-image {
     width: 100%;
@@ -28,14 +28,5 @@
   h2,
   p {
     color: $primary-font-calendar;
-  }
-  instructor-book-button {
-    margin-top: 1rem;
-    padding: 0 0.5rem;
-    align-self: stretch;
-
-    button {
-      width: 100%;
-    }
   }
 }

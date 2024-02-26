@@ -8,8 +8,8 @@ const CustomCalendar = ({ onSelectDate }) => {
   const [value, onChange] = useState(new Date());
 
   const handleDateChange = (date) => {
-    onChange(date); 
-    onSelectDate(date); 
+    onChange(date);
+    onSelectDate(date);
 
     const currDate = new Date(date);
     const currDayOfTheWeek = currDate.getDay();
@@ -24,13 +24,10 @@ const CustomCalendar = ({ onSelectDate }) => {
     ];
     const dayOfWeekName = dayNames[currDayOfTheWeek];
 
-    // Assuming you have a function to fetch available time slots
     fetchTimeSlotsForDay(dayOfWeekName);
   };
 
-  const fetchTimeSlotsForDay = (dayOfWeekName) => {
-    console.log(`Fetching time slots for ${dayOfWeekName}`);
-  };
+  const fetchTimeSlotsForDay = (dayOfWeekName) => {};
 
   return (
     <div className="calendar-wrapper">

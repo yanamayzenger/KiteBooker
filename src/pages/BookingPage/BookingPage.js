@@ -2,26 +2,20 @@ import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import CustomCalendar from "../../components/Calendar/Calendar";
-import TimeSlots from "../../components/TimeSlots/TimeSlots"; // Ensure the import path is correct
+import TimeSlots from "../../components/TimeSlots/TimeSlots";
 import WeatherWidget from "../../components/Weather/Weather";
-import InstructorsProfile from "../../components/InstructorList/InstructorList";
+import InstructorList from "../../components/InstructorList/InstructorList";
 import "./BookingPage.scss";
 
 const BookingPage = () => {
-  const [selectedDay, setSelectedDay] = useState("");
-  const [selectedTimeSlot, setSelectedTimeSlot] = useState("");
-
-  const handleSelectDate = (dayOfWeekName) => {
-    console.log(`Day selected: ${dayOfWeekName}`);
-    setSelectedDay(dayOfWeekName);
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedTimeSlot, setSelectedTimeSlot] = useState(null);
+  const handleSelectDate = (date) => {
+    setSelectedDate(date);
   };
-
   const handleSelectTimeSlot = (timeSlot) => {
-    console.log(`Time Slot selected: ${timeSlot}`);
     setSelectedTimeSlot(timeSlot);
-    // Add here: send the selected day and time slot to the backend to fetch available instructors
   };
-
   return (
     <div className="booking-page">
       <Header />
@@ -29,7 +23,6 @@ const BookingPage = () => {
         <div className="left-column">
           <div className="calendar-and-slots">
             <CustomCalendar onSelectDate={handleSelectDate} />
-            {/* Now including TimeSlots component with the onSelectTimeSlot prop */}
             <TimeSlots onSelectTimeSlot={handleSelectTimeSlot} />
           </div>
           <div className="left-bottom">
@@ -37,7 +30,10 @@ const BookingPage = () => {
           </div>
         </div>
         <div className="right-column">
-          <InstructorsProfile />
+          <InstructorList
+            selectedDate={selectedDate}
+            selectedTimeSlot={selectedTimeSlot}
+          />
         </div>
       </div>
       <Footer />
